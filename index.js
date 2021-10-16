@@ -3,8 +3,8 @@ var context = canvas.getContext("2d");
 
 var html = document.getElementById("html");
 var a = document.getElementById("a");
-html.style.color = "gold";
-a.style.color = "gold";
+html.style.color = "white";
+a.style.color = "white";
 
 vkBridge.send("VKWebAppInit", {});
 
@@ -80,7 +80,7 @@ function drawEnd() {
     context.textAlign = "center";
     context.textBaseline = "moddle";
     context.fillText("BEST "+best, 202, 230);
-    context.fillStyle = "gold";
+    context.fillStyle = "white";
     requestAnimationFrame(drawEnd);
 };
 
