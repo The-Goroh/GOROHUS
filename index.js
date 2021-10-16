@@ -21,7 +21,7 @@ var gap = 90;
 function draw() {
 
 if(xBlock < -5) {
-    yBlock = 0-(Math.random()*280), xBlock =405, score++, speed +=(score/60)
+    yBlock = 0-Math.floor(Math.random()*280), xBlock =405, score++
 };
 
 context.drawImage(back, 0, 0);
@@ -40,18 +40,18 @@ context.textBaseline = "bottom";
 context.fillText("BEST  "+best, 396, 400); //текст
 
 if(yCube > 0 && yCube < 381) {
-    yCube += grav;
+    yCube += Math.floor(grav);
 };
 
-xBlock -=speed;
+xBlock -=Math.floor(speed);
 requestAnimationFrame(draw);
-if(xBlock > xCube && xBlock < xCube + 16) {
-    if(yCube < yBlock + 300) {
+if(xBlock > 160 && xBlock < 177) {
+    if(yCube < yBlock + 299) {
         if(score > best) {best = score
         };   // сохранение
         location.reload();
     };
-    if(yCube > yBlock + 300 + gap - 16) {
+    if(yCube > yBlock + 373) {
         if(score > best) {best = score
         };   // сохранение
         location.reload();
