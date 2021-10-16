@@ -27,7 +27,7 @@ var gap = 90;
 function draw() {
 
 if(xBlock < -5) {
-    yBlock = 0-(Math.random()*280), xBlock =405, score++, speed +=(score/60), grav +=(score/100)
+    yBlock = 0-(Math.random()*280), xBlock =405, score++, speed +=(score/60)
 };
 
 context.drawImage(back, 0, 0);
