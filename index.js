@@ -50,7 +50,7 @@ if(yCube > 0 && yCube < 381) {
 
 xBlock -=speed;
 requestAnimationFrame(draw);
-if(xBlock >= xCube && xBlock < xCube + 16) {
+if(xBlock > xCube && xBlock < xCube + 17) {
     if(yCube < yBlock + 300) {
         if(score > best) {best = score,
         vkBridge.send("VKWebAppStorageSet", {"key": "best", "value": best});
