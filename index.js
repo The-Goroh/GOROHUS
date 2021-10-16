@@ -26,7 +26,7 @@ var gap = 90;
 function draw() {
 
 if(xBlock < -5) {
-    yBlock = 0-(Math.random()*280), xBlock =405, score++, speed +=(score/60), grav +=(score/100)
+    yBlock = 0-(Math.random()*280), xBlock =405, score++, speed +=(score/60)
 };
 
 context.drawImage(back, 0, 0);
@@ -50,14 +50,14 @@ if(yCube > 0 && yCube < 381) {
 
 xBlock -=speed;
 requestAnimationFrame(draw);
-if(xBlock >= xCube && xBlock < xCube+16) {cancelAnimationFrame(draw);
+if(xBlock > xCube-1 && xBlock < xCube + 18) {cancelAnimationFrame(draw);
     if(yCube < yBlock + 300) {
         if(score > best) {best = score,
         vkBridge.send("VKWebAppStorageSet", {"key": "best", "value": best});
         };   // сохранение
         location.reload();
     };
-    if(yCube > yBlock + 300 + gap + 16) {
+    if(yCube > yBlock + 300 + gap + 18) {
         if(score > best) {best = score,
         vkBridge.send("VKWebAppStorageSet", {"key": "best", "value": best});
         };   // сохранение
