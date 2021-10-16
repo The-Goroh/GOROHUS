@@ -104,3 +104,8 @@ function change() {
         draw();
     };
 };
+vkBridge.send('VKWebAppGetAds')
+    .then((promoBannerProps) => {
+        this.setState({ promoBannerProps });
+    })
+{ this.state.promoBannerProps && <PromoBanner bannerData={ this.state.promoBannerProps } /> }
