@@ -86,7 +86,7 @@ function drawEnd() {
 drawEnd();
 
 document.querySelector("canvas").addEventListener("touchstart", change);
-document.querySelector("canvas").addEventListener("mousedown", change);
+// document.querySelector("canvas").addEventListener("mousedown", change);
 
 
 function change() {
