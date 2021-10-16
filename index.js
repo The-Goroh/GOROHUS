@@ -8,6 +8,7 @@ a.style.color = "white";
 
 vkBridge.send("VKWebAppInit", {});
 
+
 var score = 0;
 var best = 0;
 
@@ -26,7 +27,7 @@ var gap = 90;
 function draw() {
 
 if(xBlock < -5) {
-    yBlock = 0-(Math.random()*280), xBlock =405, score++, speed +=(score/60)
+    yBlock = 0-(Math.random()*280), xBlock =405, score++, speed +=(score/60), grav +=(score/100)
 };
 
 context.drawImage(back, 0, 0);
@@ -50,16 +51,14 @@ if(yCube > 0 && yCube < 381) {
 
 xBlock -=speed;
 requestAnimationFrame(draw);
-if(xBlock > xCube && xBlock < xCube + 16) {cancelAnimationFrame(draw);
+if(xBlock > xCube && xBlock < xCube + 16) {
     if(yCube < yBlock + 300) {
-        if(score > best) {best = score,
-        vkBridge.send("VKWebAppStorageSet", {"key": "best", "value": best});
+        if(score > best) {best = score
         };   // сохранение
         location.reload();
     };
-    if(yCube > yBlock + 300 + gap + 16) {
-        if(score > best) {best = score,
-        vkBridge.send("VKWebAppStorageSet", {"key": "best", "value": best});
+    if(yCube > yBlock + 300 + gap - 16) {
+        if(score > best) {best = score
         };   // сохранение
         location.reload();
     };
@@ -104,8 +103,3 @@ function change() {
         draw();
     };
 };
-vkBridge.send('VKWebAppGetAds')
-    .then((promoBannerProps) => {
-        this.setState({ promoBannerProps });
-    })
-{ this.state.promoBannerProps && <PromoBanner bannerData={ this.state.promoBannerProps } /> }
