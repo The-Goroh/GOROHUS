@@ -86,8 +86,8 @@ function drawEnd() {
 drawEnd();
 
 document.querySelector("canvas").addEventListener("touchstart", change);
-// document.querySelector("canvas").addEventListener("mousedown", change);
-
+document.querySelector("#non").addEventListener("touchstart", change);
+document.querySelector("footer").addEventListener("touchstart", change);
 
 function change() {
     if(yCube <= 0 || yCube >= 381) {
