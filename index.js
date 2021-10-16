@@ -12,7 +12,7 @@ vkBridge.send("VKWebAppStorageGet", {"keys": ["best"]});
 var score = 0;
 var best = 0;
 
-vkBridge.onVKWebAppStorageGetResult = setbest(keys: ["best"]);
+vkBridge.VKWebAppStorageGetResult = setbest("keys": ["best"]);
 function setbest(item) {
     best = int(item)
 };
