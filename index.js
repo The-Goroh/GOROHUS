@@ -57,7 +57,7 @@ if(xBlock >= xCube && xBlock < xCube+16) {cancelAnimationFrame(draw);
         };   // сохранение
         location.reload();
     };
-    if(yCube > yBlock + 300 + gap - 16) {
+    if(yCube > yBlock + 300 + gap + 16) {
         if(score > best) {best = score,
         vkBridge.send("VKWebAppStorageSet", {"key": "best", "value": best});
         };   // сохранение
