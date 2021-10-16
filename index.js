@@ -7,10 +7,10 @@ html.style.color = "gold";
 a.style.color = "gold";
 
 vkBridge.send("VKWebAppInit", {});
-
+vkBridge.send("VKWebAppStorageGet", {"keys": ["best"]});
 
 var score = 0;
-var best = 0;
+var best = keys[1];
 
 var back = new Image();
 
