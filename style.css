@@ -16,10 +16,10 @@ p {
 }
 canvas {
     display: block;
-    margin: 0 auto;
+    margin: auto;
     border: 2px solid ;
 }
 #non {
     background-color: black;
-    height: 700px;
+    height: 100%;
 }
