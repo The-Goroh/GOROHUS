@@ -1,13 +1,7 @@
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 
-var html = document.getElementById("html");
-var a = document.getElementById("a");
-html.style.color = "white";
-a.style.color = "white";
-
 vkBridge.send("VKWebAppInit", {});
-
 
 var score = 0;
 var best = 0;
@@ -85,7 +79,7 @@ function drawEnd() {
 
 drawEnd();
 
-document.querySelector("#non").addEventListener("touchstart", change);
+addEventListener("touchstart", change);
 
 function change() {
     if(yCube <= 0 || yCube >= 381) {
