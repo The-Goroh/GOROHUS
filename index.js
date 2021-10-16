@@ -10,6 +10,12 @@ vkBridge.send("VKWebAppInit", {});
 vkBridge.send("VKWebAppStorageGet", {"keys": ["best"]});
 
 var score = 0;
+var best = 0;
+
+vkBridge.onVKWebAppStorageGetResult = setbest(keys: ["best"]);
+function setbest(item) {
+    best = int(item)
+};
 
 var back = new Image();
 
@@ -104,4 +110,3 @@ function change() {
         draw();
     };
 };
-var best = keys[1];
