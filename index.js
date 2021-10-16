@@ -12,11 +12,6 @@ vkBridge.send("VKWebAppStorageGet", {"keys": ["best"]});
 var score = 0;
 var best = 0;
 
-vkBridge.VKWebAppStorageGetResult = setbest("keys": ["best"]);
-function setbest(item) {
-    best = int(item)
-};
-
 var back = new Image();
 
 back.src = "bg.png";
