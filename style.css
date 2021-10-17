@@ -18,6 +18,6 @@ p {
 canvas {
     display: block;
     margin: 0 auto;
-    margin-top: 20%;
+    bottom: 100px;
     border: 1px solid;
 }
