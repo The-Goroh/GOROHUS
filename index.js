@@ -44,13 +44,14 @@ if(yCube > 0 && yCube < 381) {
 };
 
 xBlock -=Math.floor(speed);
-
+requestAnimationFrame(draw);
 if(xBlock > 160 && xBlock < 177) {
     if(yCube < yBlock + 299 || yCube > yBlock + 373) {
+        cancelAnimationFrame(draw),
         location.reload();
     };
 };
-requestAnimationFrame(draw);
+
 };
 
 var ACT = 1
