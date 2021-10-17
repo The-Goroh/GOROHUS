@@ -46,12 +46,7 @@ if(yCube > 0 && yCube < 381) {
 xBlock -=Math.floor(speed);
 requestAnimationFrame(draw);
 if(xBlock > 160 && xBlock < 177) {
-    if(yCube < yBlock + 299) {
-        if(score > best) {best = score
-        };   // сохранение
-        location.reload();
-    };
-    if(yCube > yBlock + 373) {
+    if(yCube < yBlock + 299 || yCube > yBlock + 373) {
         if(score > best) {best = score
         };   // сохранение
         location.reload();
