@@ -10,5 +10,5 @@ bridge.subscribe((e) => {
         firstname= e.data.first_name;
         lastname= e.data.last_name;
         photo100= e.data.photo_100;
-        document.getElementsByName('div').textContent = firstname+' '+lastname
+        document.getElementById('p').textContent = firstname+' '+lastname
     }});
