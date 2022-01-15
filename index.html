@@ -7,16 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+    <script>import bridge from '@vkontakte/vk-bridge';</script>
 
     <script>
 
 
-vkBridge.send('VKWebAppInit');
-vkBridge.send('VKWebAppGetUserInfo');
+bridge.send('VKWebAppInit');
+bridge.send('VKWebAppGetUserInfo');
 
 
-vkBridge.subscribe(event => {
+bridge.subscribe(event => {
   if (!event.detail) {
     return;
   }
